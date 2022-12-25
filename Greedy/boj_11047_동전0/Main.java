@@ -1,4 +1,4 @@
-package Greedy.boj_11047_동전0;
+package greedy.boj_11047_동전0;
 
 import java.io.BufferedReader;
 import java.io.IOException;
