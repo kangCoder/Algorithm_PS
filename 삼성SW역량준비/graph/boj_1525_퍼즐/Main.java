@@ -26,8 +26,8 @@ public class Main {
 
             int curMove = map.get(cur);
             int emptyLocation = cur.indexOf('0');
-            int curY = emptyLocation % 3; //현재 0의 y좌표
-            int curX = emptyLocation / 3; //현재 0의 x좌표
+            int curY = emptyLocation / 3; //현재 0의 y좌표
+            int curX = emptyLocation % 3; //현재 0의 x좌표
 
             if (cur.equals(target)) {
                 return curMove;
@@ -60,17 +60,17 @@ public class Main {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st;
 
-        String source = "";
+        StringBuilder source = new StringBuilder();
         for (int i = 0; i < 3; i++) {
             st = new StringTokenizer(br.readLine());
             for (int j = 0; j < 3; j++) {
-                source += st.nextToken();
+                source.append(st.nextToken());
             }
         }
 
-        map.put(source, 0);
+        map.put(source.toString(), 0);
 
-        System.out.println(bfs(source));
+        System.out.println(bfs(source.toString()));
     }
 
 }
